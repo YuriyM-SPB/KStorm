@@ -25,7 +25,6 @@ public class CountBolt implements IRichBolt{
     @Override
     public void execute(Tuple input) {
         String str = input.getString(0);
-        System.out.println("STRING IS" + str);
         if(!counters.containsKey(str)){
             counters.put(str, 1);
         }else {
